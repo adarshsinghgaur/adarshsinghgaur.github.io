@@ -1,0 +1,154 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #e3e6e6;
+}
+
+/* SAFETY: NEVER LET IMAGES BREAK LAYOUT */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ───────── NAVBAR ───────── */
+
+.navbar {
+  width: 100%;
+  background: #131921;
+  color: white;
+  display: grid;
+  grid-template-columns: auto minmax(120px, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+}
+
+/* LEFT */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 90px;
+}
+
+.location {
+  display: flex;
+  gap: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+/* SEARCH */
+
+.search-bar {
+  display: flex;
+  min-width: 0; /* 🔑 critical for grid */
+}
+
+.search-bar select {
+  border: none;
+  background: #e6e6e6;
+  padding: 0 6px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 6px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  border: none;
+  background: #febd69;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+/* RIGHT */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.language img {
+  width: 18px; /* 🔑 flag fixed */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cart i {
+  font-size: 20px;
+}
+
+/* ───────── SUB NAV ───────── */
+
+.subnav {
+  width: 100%;
+  background: #232f3e;
+  display: flex;
+  gap: 16px;
+  padding: 8px 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.subnav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.subnav::-webkit-scrollbar {
+  display: none;
+}
+
+/* ───────── RESPONSIVE (NO OVERLAP) ───────── */
+
+@media (max-width: 900px) {
+  .nav-item strong {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .location,
+  .language span,
+  .search-bar select {
+    display: none;
+  }
+}
