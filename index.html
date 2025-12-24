@@ -1,82 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amazon Clone</title>
-
-  <link rel="stylesheet" href="styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-</head>
-
-<body>
-
-<header class="navbar">
-  <!-- LEFT -->
-  <div class="nav-left">
-    <img
-      class="logo"
-      src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-      alt="Amazon"
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amazon Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
-    <div class="location">
-      <i class="fa-solid fa-location-dot"></i>
-      <div>
-        <span class="small-text">Deliver to</span>
-        <strong>India</strong>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-left">
+        <img
+          class="logo"
+          src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          alt="Amazon"
+        />
+
+        <div class="location">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <span class="small-text">Deliver to</span>
+            <strong>India</strong>
+          </div>
+        </div>
       </div>
+      <div class="search-bar">
+        <select>
+          <option>All</option>
+          <option>Alexa Skills</option>
+          <option>Amazon Devices</option>
+          <option>Amazon Fashion</option>
+          <option>Books</option>
+        </select>
+
+        <input type="text" placeholder="Search Amazon.in" />
+        <button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <div class="language">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
+          alt="India"
+        />
+        <select class="lang">
+          <option>EN</option>
+          <option>हिंदी</option>
+        </select>
+      </div>
+
+      <div class="nav-right">
+        <div class="nav-item">
+          <span class="small-text">Hello, Sign in</span>
+          <strong>Account & Lists</strong>
+        </div>
+
+        <div class="nav-item">
+          <span class="small-text">Returns</span>
+          <strong>& Orders</strong>
+        </div>
+
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <b>Cart</b>
+        </div>
+      </div>
+    </header>
+    <div class="subnav">
+      <input type="checkbox" id="menu-toggle" hidden />
+
+      <label for="menu-toggle" class="hamburger">
+        <i class="fa-solid fa-bars"></i> All
+      </label>
+
+      <div class="side-menu">
+        <div class="side-header">
+          <i class="fa-solid fa-user"></i>
+          Hello, sign in
+          <label for="menu-toggle" class="close-btn">✕</label>
+        </div>
+
+        <div class="side-content">
+          <h3>Trending</h3>
+          <a href="#">Best Sellers</a>
+          <a href="#">New Releases</a>
+          <a href="#">Movers and Shakers</a>
+          <hr />
+          <h3>Digital Content and Devices</h3>
+          <a href="#">Echo & Alexa</a>
+          <a href="#">Fire TV</a>
+          <a href="#">Kindle E-Readers & e-Books</a>
+          <a href="#">Audible Audiobooks</a>
+          <a href="#">Amazon Prime Video</a>
+          <a href="#">Amazon Prime Music</a>
+          <hr />
+          <h3>Shoy by Category</h3>
+          <a href="#">Mobiles, Computers</a>
+          <a href="#">TV, Appliances, Electronics</a>
+          <a href="#">Men's Fashion</a>
+          <a href="#">Women's Fashion</a>
+          <hr />
+          <h3>Program & Features</h3>
+          <a href="#">Gifts Cards and Mobile Recharges</a>
+          <a href="#">Amazon Launchpad</a>
+          <a href="#">Amazon Business</a>
+          <a href="#">Handloom and Handicrafts</a>
+          <hr />
+          <h3>Help & Settings</h3>
+          <a href="#">Your Account</a>
+          <a href="#">Customer Services</a>
+          <a href="#">Sign in</a>
+        </div>
+      </div>
+
+      <div class="overlay"></div>
+
+      <a href="#">Fresh </a>
+      <a href="#">MX Player</a>
+      <a href="#">Sell</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">Mobiles</a>
+      <a href="#">Today's Deals</a>
+      <a href="#">Customer Service</a>
+      <a href="#">Prime <i class="fa-solid fa-caret-down"></i></a>
+      <a href="#">Amazon pay</a>
+      <a href="#">Electronics</a>
+      <a href="#">Fashion</a>
+      <a href="#">Home & Kitchen</a>
+      <a href="#">Gift Cards</a>
     </div>
-  </div>
-
-  <!-- SEARCH -->
-  <div class="search-bar">
-    <select>
-      <option>All</option>
-    </select>
-    <input type="text" placeholder="Search Amazon.in" />
-    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-  </div>
-
-  <!-- RIGHT -->
-  <div class="nav-right">
-    <div class="language">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
-        alt="India"
-      />
-      <span>EN</span>
-    </div>
-
-    <div class="nav-item">
-      <span class="small-text">Hello</span>
-      <strong>Sign in</strong>
-    </div>
-
-    <div class="nav-item">
-      <strong>Returns</strong>
-    </div>
-
-    <div class="cart">
-      <i class="fa-solid fa-cart-shopping"></i>
-      <strong>Cart</strong>
-    </div>
-  </div>
-</header>
-
-<nav class="subnav">
-  <a><i class="fa-solid fa-bars"></i> All</a>
-  <a>Fresh</a>
-  <a>MX Player</a>
-  <a>Sell</a>
-  <a>Best Sellers</a>
-  <a>Mobiles</a>
-  <a>Today's Deals</a>
-  <a>Customer Service</a>
-</nav>
-
-</body>
+    
+  </body>
 </html>
